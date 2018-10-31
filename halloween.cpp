@@ -1,22 +1,28 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 
 using namespace std;
 
-vector<string> emojis{ "hola" };
+vector<string> emojis{ "👻", "🔪", "🧛‍♂️", "💀", "☠️", "🎃"};
 
 string random_emoji() {
-    
 	return emojis[rand() % emojis.size()];
 }
 
 int main() {
-	cout << "Enter the number of emojis:" << endl;
-	
-    	int num = 0;
-   	cin >> num;
-	
-	for (int i = 0; i < num; i++){
-        	cout << random_emoji() << endl;
-	}
+    
+    cout << "👻 Enter the number of emojis:" << endl;
+    int num = 0;
+    cin >> num;
+    
+    srand(time(0));
+    
+    cout << "Beware of the spooky emojis! 🎃" << endl;
+    
+    for (int i = 0; i < num; i++){
+        for (int j = 0; j < rand()%60; j++) cout << "._";
+        cout << random_emoji() << endl;
+    }
+    
 }
