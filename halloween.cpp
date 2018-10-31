@@ -7,5 +7,12 @@ string random_emoji() {
 }
 
 int main() {
-	cout << random_emoji() << endl;
+	cout << "Enter the number of emojis:" << endl;
+	
+    	int num = 0;
+   	cin >> num;
+	
+	for (int i = 0; i < num; i++){
+        	cout << random_emoji() << endl;
+	}
 }
