@@ -1,9 +1,13 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
+vector<string> emojis{ "hola" };
+
 string random_emoji() {
-	return "";
+    
+	return emojis[rand() % emojis.size()];
 }
 
 int main() {
